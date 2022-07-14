@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<exceptions>
+  <exceptionGroup name="Phatra.SampleSystem.Business.BusinessException.Provident">
+    <exception name="InvalidColumnCurrencyTextFileException">
+      <message>Column '{0}' มีข้อมูลจำนวนหน่วยเงิน '{1}' ไม่ถูกต้องตามรูปแบบ '{2}'</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="InvalidColumnDataTimeTextFileException">
+      <message>Column '{0}' มีข้อมูลวันที่ '{1}' ไม่ถูกต้องตามรูปแบบ '{2}'</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="InvalidColumnIntegerTextFileException">
+      <message>Column '{0}' มีข้อมูลจำนวนหน่วยเงิน '{1}' ไม่ถูกต้องตามรูปแบบ '{2}'</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="InvalidColumnNotAvailableTextFileException">
+      <message>Column '{0}' มีข้อมูล '{1}' ไม่สามารถมีค่า null หรือ ค่าว่างได้</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="InvalidColumnStringTextFileException">
+      <message>Column '{0}' มีข้อมูล '{1}' ไม่ถูกต้อง '{2}'</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="PassedUnitApproveException">
+      <message>บริษัท '{0}' วันที่ Import '{1}' ผ่านขั้นตอนการ Approve คำนวณหน่วยเรียบร้อยแล้ว</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="PassedUnitCalculationException">
+      <message>บริษัท '{0}' วันที่ Import '{1}' ผ่านขั้นตอนการ Process คำนวณหน่วยเรียบร้อยแล้ว</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="TotalAcmNotMatchReceiptDataException">
+      <message>
+        จำนวนเงินนำส่งของบริษัท '{0}' นโยบาย '{1}'
+        ตามใบเสร็จ (เงินสะสม '{2}' เงินสมทบ '{3}')
+        ไม่ตรงกับจำนวนเงินใน
+        Pre-Import (เงินสะสม '{4}' เงินสมทบ '{5}')"
+      </message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="UserInfoNotFoundException">
+      <message>ไม่มีข้อมูล User Info	</message>
+      <otherMessage></otherMessage>
+    </exception>
+   
+  </exceptionGroup>
+  <exceptionGroup name="Phatra.SampleSystem.Business.BusinessException.User">
+    <exception name="InvalidIdForPasswordRecoveryException">
+      <message>รหัสสำหรับใช้ในการตรวจสอบ Recovery Password ไม่ถูกต้อง</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="InvalidPasswordException">
+      <message>รหัสผ่านไม่ถูกต้อง</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="PasswordRecoveryExpireException">
+      <message>หมดเวลาในการขอ Recovery Password</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="PasswordRecoveryNotFoundException">
+      <message>ไม่พบข้อมูลสำหรับทำการ Password Recovery</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="UserNameAlreadyExistException">
+      <message>มี user name '{0}' นี้ในระบบแล้ว</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="UserNameDisabledException.cs">
+      <message>Account นี้ไม่เปิดให้ใช้งาน</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="UserNameEmailNotFoundException">
+      <message>ไม่พบข้อมูล Email '{0}' นี้ในระบบ</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="UserNameLockedException">
+      <message>Account นี้ถูก lock</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="UserNameNoEmailException">
+      <message>Account '{0}' ไม่มีข้อมูล Email Address</message>
+      <otherMessage></otherMessage>
+    </exception>
+
+    <exception name="UserNameNotFoundException">
+      <message>ไม่พบ user name นี้ในระบบ</message>
+      <otherMessage></otherMessage>
+    </exception>
+  </exceptionGroup>
+</exceptions>

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECC8CDFF-7968-48D2-8B59-5CB7751EFB08}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phatra.Core</RootNamespace>
+    <AssemblyName>Phatra.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PTSECMSWEB16D1|AnyCPU'">
+    <OutputPath>bin\PTSECMSWEB16D1\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PTSECMSWEB16D1_PCG|AnyCPU'">
+    <OutputPath>bin\PTSECMSWEB16D1_PCG\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PTSECMSWEB16D1_GMI|AnyCPU'">
+    <OutputPath>bin\PTSECMSWEB16D1_GMI\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PTSECMSWEBU12_GMI|AnyCPU'">
+    <OutputPath>bin\PTSECMSWEBU12_GMI\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PTSECMSWEBU12_PCG|AnyCPU'">
+    <OutputPath>bin\PTSECMSWEBU12_PCG\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PTSECMSSQL17U1|AnyCPU'">
+    <OutputPath>bin\PTSECMSSQL17U1\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.3.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdoNet\CommandBuilder.cs" />
+    <Compile Include="AdoNet\ConvertTo.cs" />
+    <Compile Include="AdoNet\Database.cs" />
+    <Compile Include="AdoNet\DataReaderExtension.cs" />
+    <Compile Include="AdoNet\DataRecordExtension.cs" />
+    <Compile Include="AdoNet\DbConfig.cs" />
+    <Compile Include="AdoNet\DBNullHelper.cs" />
+    <Compile Include="AdoNet\DbProviderFactoryEx.cs" />
+    <Compile Include="AdoNet\DatabaseFactory.cs" />
+    <Compile Include="AdoNet\Dynamic.cs" />
+    <Compile Include="AdoNet\EnumerableExtension.cs" />
+    <Compile Include="AdoNet\Extensions\Experimental\DbExtensions.cs" />
+    <Compile Include="AdoNet\Extensions\Experimental\IQuery.cs" />
+    <Compile Include="AdoNet\Extensions\Experimental\Query.cs" />
+    <Compile Include="AdoNet\Extensions\ExtensionsForDataSetRelatedStuff.cs" />
+    <Compile Include="AdoNet\Extensions\SqlClient\Extensions.cs" />
+    <Compile Include="AdoNet\FastReflection.cs" />
+    <Compile Include="AdoNet\IDatabase.cs" />
+    <Compile Include="AdoNet\Logger.cs" />
+    <Compile Include="AdoNet\MappingConvention.cs" />
+    <Compile Include="AdoNet\MultiResultSet.cs" />
+    <Compile Include="Caching\CacheExtensions.cs" />
+    <Compile Include="Caching\ICacheManager.cs" />
+    <Compile Include="Caching\MemoryCacheManager.cs" />
+    <Compile Include="CommonHelper.cs" />
+    <Compile Include="ComponentModel\GenericListTypeConverter.cs" />
+    <Compile Include="ComponentModel\WriteLockDisposable.cs" />
+    <Compile Include="Configuration\EngineConfig.cs" />
+    <Compile Include="Configuration\IEngineConfig.cs" />
+    <Compile Include="Converter\ConcatenationOptions.cs" />
+    <Compile Include="Converter\ConversionOptions.cs" />
+    <Compile Include="Converter\GenericStringConcatenator.cs" />
+    <Compile Include="Converter\GenericStringSplitter.cs" />
+    <Compile Include="Converter\InvalidConversionException.cs" />
+    <Compile Include="Converter\IStringConcatenator.cs" />
+    <Compile Include="Converter\IStringSplitter.cs" />
+    <Compile Include="Converter\ObjectExtension.cs" />
+    <Compile Include="Converter\UniversalTypeConverter.Core.cs" />
+    <Compile Include="Converter\UniversalTypeConverter.Core.SpecialValues.cs" />
+    <Compile Include="Converter\UniversalTypeConverter.cs" />
+    <Compile Include="Converter\UniversalTypeConverter.Enumerable.cs" />
+    <Compile Include="Converter\UniversalTypeConverter.EnumerableConversion.cs" />
+    <Compile Include="Converter\UniversalTypeConverter.EnumerableStringConversion.cs" />
+    <Compile Include="Converter\UniversalTypeConverter.Helpers.cs" />
+    <Compile Include="CsvHelper\Compatibility\NETSTANDARD\TypeExtensions.cs" />
+    <Compile Include="CsvHelper\Compatibility\NETSTANDARD\TypeInfo.cs" />
+    <Compile Include="CsvHelper\Compatibility\NET_2_0\Delegates.cs" />
+    <Compile Include="CsvHelper\Compatibility\NET_2_0\EnumerableExtensions.cs" />
+    <Compile Include="CsvHelper\Compatibility\NET_2_0\ExtensionAttribute.cs" />
+    <Compile Include="CsvHelper\Compatibility\NET_2_0\StringExtensions.cs" />
+    <Compile Include="CsvHelper\Compatibility\NET_3_5\Tuple`2.cs" />
+    <Compile Include="CsvHelper\Compatibility\PCL\EnumerableExtensions.cs" />
+    <Compile Include="CsvHelper\Configuration\AutoMapOptions.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvClassMap.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvClassMapCollection.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvClassMap`1.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvConfiguration.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvConfigurationException.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvPropertyMap.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvPropertyMapCollection.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvPropertyMapComparer.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvPropertyMapData.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvPropertyNameCollection.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvPropertyReferenceMap.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvPropertyReferenceMapCollection.cs" />
+    <Compile Include="CsvHelper\Configuration\CsvPropertyReferenceMapData.cs" />
+    <Compile Include="CsvHelper\Configuration\DefaultCsvClassMap`1.cs" />
+    <Compile Include="CsvHelper\Configuration\ICsvParserConfiguration.cs" />
+    <Compile Include="CsvHelper\Configuration\ICsvReaderConfiguration.cs" />
+    <Compile Include="CsvHelper\Configuration\ICsvSerializerConfiguration.cs" />
+    <Compile Include="CsvHelper\Configuration\ICsvWriterConfiguration.cs" />
+    <Compile Include="CsvHelper\Configuration\MapTypeConverterOption.cs" />
+    <Compile Include="CsvHelper\Configuration\MemberTypes.cs" />
+    <Compile Include="CsvHelper\CsvBadDataException.cs" />
+    <Compile Include="CsvHelper\CsvFactory.cs" />
+    <Compile Include="CsvHelper\CsvHelperException.cs" />
+    <Compile Include="CsvHelper\CsvMissingFieldException.cs" />
+    <Compile Include="CsvHelper\CsvParser.cs" />
+    <Compile Include="CsvHelper\CsvParserException.cs" />
+    <Compile Include="CsvHelper\CsvReader.cs" />
+    <Compile Include="CsvHelper\CsvReaderException.cs" />
+    <Compile Include="CsvHelper\CsvSerializer.cs" />
+    <Compile Include="CsvHelper\CsvWriter.cs" />
+    <Compile Include="CsvHelper\CsvWriterException.cs" />
+    <Compile Include="CsvHelper\ExceptionHelper.cs" />
+    <Compile Include="CsvHelper\FieldReader.cs" />
+    <Compile Include="CsvHelper\ICsvFactory.cs" />
+    <Compile Include="CsvHelper\ICsvParser.cs" />
+    <Compile Include="CsvHelper\ICsvReader.cs" />
+    <Compile Include="CsvHelper\ICsvReaderRow.cs" />
+    <Compile Include="CsvHelper\ICsvSerializer.cs" />
+    <Compile Include="CsvHelper\ICsvWriter.cs" />
+    <Compile Include="CsvHelper\ICsvWriterRow.cs" />
+    <Compile Include="CsvHelper\RecordBuilder.cs" />
+    <Compile Include="CsvHelper\ReflectionExtensions.cs" />
+    <Compile Include="CsvHelper\ReflectionHelper.cs" />
+    <Compile Include="CsvHelper\StringHelper.cs" />
+    <Compile Include="CsvHelper\TypeConversion\ArrayConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\ArrayListConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\BooleanConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\ByteConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\CharConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\CollectionGenericConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\CsvTypeConverterException.cs" />
+    <Compile Include="CsvHelper\TypeConversion\DateTimeConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\DateTimeOffsetConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\DecimalConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\DefaultTypeConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\DoubleConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\EnumConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\EnumerableConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\GuidConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\IDictionaryConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\IDictionaryGenericConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\IEnumerableConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\IEnumerableGenericConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\Int16Converter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\Int32Converter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\Int64Converter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\ITypeConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\NullableConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\SByteConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\SingleConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\StringConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\TimeSpanConverter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\TypeConverterFactory.cs" />
+    <Compile Include="CsvHelper\TypeConversion\TypeConverterOptions.cs" />
+    <Compile Include="CsvHelper\TypeConversion\TypeConverterOptionsFactory.cs" />
+    <Compile Include="CsvHelper\TypeConversion\UInt16Converter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\UInt32Converter.cs" />
+    <Compile Include="CsvHelper\TypeConversion\UInt64Converter.cs" />
+    <Compile Include="Exceptions\BaseBusinessException.cs" />
+    <Compile Include="Exceptions\BaseMessageException.cs" />
+    <Compile Include="Exceptions\ExampleException.cs" />
+    <Compile Include="Exceptions\SqlServerBusinessException.cs" />
+    <Compile Include="Extension.cs" />
+    <Compile Include="Extensions\Collection.Extension.cs" />
+    <Compile Include="Extensions\Datetime.Extension.cs" />
+    <Compile Include="Extensions\DynamicQueryable.cs" />
+    <Compile Include="Extensions\Object.Extension.cs" />
+    <Compile Include="Extensions\String.Extension.cs" />
+    <Compile Include="Infrastructure\AppDomainTypeFinder.cs" />
+    <Compile Include="Infrastructure\ApplicationContext.cs" />
+    <Compile Include="Infrastructure\ApplicationEngine.cs" />
+    <Compile Include="Infrastructure\BaseContext.cs" />
+    <Compile Include="Infrastructure\BaseEngine.cs" />
+    <Compile Include="Infrastructure\DependencyManagement\ContainerManager.cs" />
+    <Compile Include="Infrastructure\DependencyManagement\IContainerManager.cs" />
+    <Compile Include="Infrastructure\DependencyManagement\IDependencyRegistrar.cs" />
+    <Compile Include="Infrastructure\DependencyRegistrar.cs" />
+    <Compile Include="Infrastructure\IEngine.cs" />
+    <Compile Include="Infrastructure\IStartupTask.cs" />
+    <Compile Include="Infrastructure\ITypeFinder.cs" />
+    <Compile Include="Infrastructure\Singleton.cs" />
+    <Compile Include="Logging\BaseLoggingModule.cs" />
+    <Compile Include="Logging\ILoggerFactory.cs" />
+    <Compile Include="Logging\Log4NetLoggerFactory.cs" />
+    <Compile Include="StaticReflection.cs" />
+    <Compile Include="Utilities\EnumUtility.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Log4NetLogger.cs" />
+    <Compile Include="Logging\Log4NetModule.cs" />
+    <Compile Include="Logging\LogEntry.cs" />
+    <Compile Include="Logging\LoggerExtensions.cs" />
+    <Compile Include="Logging\NullLogger.cs" />
+    <Compile Include="Logging\NullModule.cs" />
+    <Compile Include="Managers\BaseManager.cs" />
+    <Compile Include="Managers\IfisManager.cs" />
+    <Compile Include="Managers\WebCtrlManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\BulkCopy.cs" />
+    <Compile Include="Utilities\ConfigurationHelper.cs" />
+    <Compile Include="Utilities\StringCipher.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Exceptions\Example Business Exception.xml" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
