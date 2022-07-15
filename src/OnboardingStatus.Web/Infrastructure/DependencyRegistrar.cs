@@ -1,12 +1,12 @@
-﻿using Phatra.Core.Infrastructure.DependencyManagement;
+﻿using Autofac;
+using Phatra.Core.Infrastructure;
+using Phatra.Core.Infrastructure.DependencyManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Phatra.Core.Infrastructure;
-using Autofac;
 
-namespace OnboardingStatus.Web.Infrastructure
+namespace OnboardingStatus_Web.Infrastructure
 {
     public class DependencyRegistrar : IDependencyRegistrar
     {
@@ -14,7 +14,7 @@ namespace OnboardingStatus.Web.Infrastructure
 
         public void Register(ContainerBuilder builder, ITypeFinder typeFinder)
         {
-            //throw new NotImplementedException();
+            
         }
 
         public void SetDependencyResolver(IContainer container)

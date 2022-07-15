@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace OnboardingStatus.Web.Controllers
+namespace OnboardingStatus_Web.Controllers
 {
     public class ClientController : Controller
     {
-        // GET: Client
+
         public ActionResult OnboardingStatus()
         {
             return View();

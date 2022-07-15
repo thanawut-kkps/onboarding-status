@@ -2,40 +2,53 @@
 
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    @Html.DevExpress().GetStyleSheets( 
-    new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout }, 
-    new StyleSheet { ExtensionSuite = ExtensionSuite.Editors }, 
-    new StyleSheet { ExtensionSuite = ExtensionSuite.HtmlEditor }, 
-    new StyleSheet { ExtensionSuite = ExtensionSuite.GridView }, 
-    new StyleSheet { ExtensionSuite = ExtensionSuite.PivotGrid },
-    new StyleSheet { ExtensionSuite = ExtensionSuite.Chart },
-    new StyleSheet { ExtensionSuite = ExtensionSuite.Report },
-    new StyleSheet { ExtensionSuite = ExtensionSuite.Scheduler },
-    new StyleSheet { ExtensionSuite = ExtensionSuite.TreeList },
-    new StyleSheet { ExtensionSuite = ExtensionSuite.RichEdit },
-    new StyleSheet { ExtensionSuite = ExtensionSuite.Spreadsheet },
-    new StyleSheet { ExtensionSuite = ExtensionSuite.SpellChecker }
-)
-@Html.DevExpress().GetScripts( 
-    new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout }, 
-    new Script { ExtensionSuite = ExtensionSuite.HtmlEditor }, 
-    new Script { ExtensionSuite = ExtensionSuite.GridView }, 
-    new Script { ExtensionSuite = ExtensionSuite.PivotGrid },
-    new Script { ExtensionSuite = ExtensionSuite.Editors }, 
-    new Script { ExtensionSuite = ExtensionSuite.Chart },
-    new Script { ExtensionSuite = ExtensionSuite.Report },
-    new Script { ExtensionSuite = ExtensionSuite.Scheduler },
-    new Script { ExtensionSuite = ExtensionSuite.TreeList },
-    new Script { ExtensionSuite = ExtensionSuite.RichEdit },
-    new Script { ExtensionSuite = ExtensionSuite.Spreadsheet },
-    new Script { ExtensionSuite = ExtensionSuite.SpellChecker }
-)
+    <title>Onboarding Status</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    @* Uncomment to use the HtmlEditor control *@
+    @* <script src="https://unpkg.com/devextreme-quill@21_2/dist/dx-quill.min.js"></script> *@
+
+    @Styles.Render("~/Content/bundle")
+    @Styles.Render("~/Content/DevExtremeBundle")
+    @Scripts.Render("~/Scripts/bundle")
+    @Scripts.Render("~/Scripts/DevExtremeBundle")
+
+    @RenderSection("Localization", false)
+    <script type="text/javascript">
+        var baseUrl = '@Url.Content("~/")';
+    </script>
 </head>
 
 <body>
-    @RenderBody()
+    <main role="main" class="container">
+        @RenderBody()
+    </main>
+
+    @RenderSection("scripts", required: false)
+    <div class="loadPanel"></div>
+    <script>
+        var loadPanel = $(".loadPanel").dxLoadPanel({
+            shadingColor: "rgba(0,0,0,0.4)",
+            position: { of: "#body-container" },
+            visible: false,
+            showIndicator: true,
+            showPane: true,
+            shading: true,
+            closeOnOutsideClick: false,
+            onShowing: function () {
+            },
+            onShown: function () {
+            },
+            onHidden: function () {
+            }
+        }).dxLoadPanel("instance");
+    </script>
 </body>
+
 </html>
