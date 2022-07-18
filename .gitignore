@@ -15,8 +15,8 @@
 !/packages/*/lib/*/*.dll
 # Include dlls if they're in the CommonReferences directory
 !*CommonReferences/*.dll
-# Include dlls if they’re in the NuGet packages directory
-!lib/*/*.dll
+# Include dlls if they’re in the lib packages directory
+!lib/*
 ####################
 # VS Upgrade stuff #
 ####################
