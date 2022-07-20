@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/OnboardingStatus.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OnboardingStatus.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ClientDetailMock">
-    <xs:sequence />
+  <xs:complexType name="OnboardingProcessHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfOnboardingProcessItem" />
+      <xs:element minOccurs="0" name="account_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="date_of_birth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mobile_phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name_en" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name_th" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="onboarding_status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pid" nillable="true" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:element name="ClientDetailMock" nillable="true" type="tns:ClientDetailMock" />
+  <xs:element name="OnboardingProcessHeader" nillable="true" type="tns:OnboardingProcessHeader" />
+  <xs:complexType name="ArrayOfOnboardingProcessItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OnboardingProcessItem" nillable="true" type="tns:OnboardingProcessItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOnboardingProcessItem" nillable="true" type="tns:ArrayOfOnboardingProcessItem" />
+  <xs:complexType name="OnboardingProcessItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lvl" type="xs:int" />
+      <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="seq" type="xs:int" />
+      <xs:element minOccurs="0" name="status_desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="step_date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="step_desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="step_time" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OnboardingProcessItem" nillable="true" type="tns:OnboardingProcessItem" />
 </xs:schema>

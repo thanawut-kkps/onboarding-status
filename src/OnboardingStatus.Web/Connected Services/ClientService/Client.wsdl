@@ -13,20 +13,20 @@
   <wsdl:message name="IClientService_GetHelloWorld_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetHelloWorldResponse" />
   </wsdl:message>
-  <wsdl:message name="IClientService_ClientDetailMock_InputMessage">
-    <wsdl:part name="parameters" element="tns:ClientDetailMock" />
+  <wsdl:message name="IClientService_GetClientProcess_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientProcess" />
   </wsdl:message>
-  <wsdl:message name="IClientService_ClientDetailMock_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ClientDetailMockResponse" />
+  <wsdl:message name="IClientService_GetClientProcess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientProcessResponse" />
   </wsdl:message>
   <wsdl:portType name="IClientService">
     <wsdl:operation name="GetHelloWorld">
       <wsdl:input wsaw:Action="http://tempuri.org/IClientService/GetHelloWorld" message="tns:IClientService_GetHelloWorld_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClientService/GetHelloWorldResponse" message="tns:IClientService_GetHelloWorld_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ClientDetailMock">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/ClientDetailMock" message="tns:IClientService_ClientDetailMock_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/ClientDetailMockResponse" message="tns:IClientService_ClientDetailMock_OutputMessage" />
+    <wsdl:operation name="GetClientProcess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/GetClientProcess" message="tns:IClientService_GetClientProcess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/GetClientProcessResponse" message="tns:IClientService_GetClientProcess_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IClientService" type="tns:IClientService">
@@ -40,8 +40,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ClientDetailMock">
-      <soap:operation soapAction="http://tempuri.org/IClientService/ClientDetailMock" style="document" />
+    <wsdl:operation name="GetClientProcess">
+      <soap:operation soapAction="http://tempuri.org/IClientService/GetClientProcess" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

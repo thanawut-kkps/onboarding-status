@@ -1,5 +1,108 @@
-﻿@{
+﻿@model OnboardingStatus_Web.Models.OnboardingStatus
+@{
     ViewBag.Title = "OnboardingStatus";
+    string col1 = "2";
+    string col2 = "4";
+    string col3 = "2";
+    string col4 = "4";
+    
 }
-<h2>OnboardingStatus</h2>
 
+    <div class="dxpnlControl_DevEx  panel-gadget">
+        <div class="panel-gadget-header">
+            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;Onboarding Investment Account with KKP Securities - Detail
+        </div>
+        <div class="panel-gadget-detail can-hide" style="padding-left: 10px; padding-top: 15px;">
+            @*<div class="row nomargin row-detail">
+                <h1>Onboarding Investment Account with KKP Securities - Detail</h1>
+            </div>*@
+            <div style="padding-left: 10px;">
+                <div class="row nomargin row-detail">
+                    <div class="col-sm-@col1  nopadding">
+                        <strong>Card ID</strong>
+                    </div>
+                    <div class="col-sm-@col2  nopadding">
+                        @Model.pid
+                    </div>
+                    <div class="col-sm-@col3 nopadding">
+                        <strong>Onboarding Status</strong>
+
+                    </div>
+                    <div class="col-sm-@col4 nopadding">
+                        @Model.onboarding_status
+                    </div>
+                </div>
+                <div class="row nomargin row-detail">
+                    <div class="col-sm-@col1 nopadding">
+                        <strong>Name Surname (TH)</strong>
+
+                    </div>
+                    <div class="col-sm-@col2 nopadding">
+                        @Model.name_th
+                    </div>
+                    <div class="col-sm-@col3 nopadding">
+                        <strong>Name Surname (EN)</strong>
+
+                    </div>
+                    <div class="col-sm-@col4 nopadding">
+                        @Model.name_en
+                    </div>
+                </div>
+                <div class="row nomargin row-detail">
+                    <div class="col-sm-@col1 nopadding">
+                        <strong>Mobile Phone</strong>
+
+                    </div>
+                    <div class="col-sm-@col2 nopadding">
+                        @Model.mobile_phone
+                    </div>
+                    <div class="col-sm-@col3 nopadding">
+                        <strong>Email</strong>
+                    </div>
+                    <div class="col-sm-@col4 nopadding">
+                        @Model.email
+                    </div>
+                </div>
+                <div class="row nomargin row-detail">
+                    <div class="col-sm-@col1 nopadding">
+                        <strong>Date of Birth</strong>
+                    </div>
+                    <div class="col-sm-@col2 nopadding">
+                        @Model.date_of_birth
+                    </div>
+                    <div class="col-sm-@col3 nopadding">
+                        <strong>Account No</strong>
+                    </div>
+                    <div class="col-sm-@col4 nopadding">
+                        @Model.account_no
+                    </div>
+                </div>
+
+                <div class="row nomargin space-above">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr style="">
+                                <th>State</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Error / Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var i in Model.Items)
+                            {
+                                <tr style="vertical-align:top">
+                                    <td style="padding-left: @((i.lvl)*10)px;">@i.step_desc</td>
+                                    <td>@i.status_desc</td>
+                                    <td>@i.step_date</td>
+                                    <td>@i.step_time</td>
+                                    <td>@i.remark</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
