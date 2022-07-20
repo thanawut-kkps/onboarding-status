@@ -1,2 +1,336 @@
+/* Base class */
 body {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #eeeeee;
+}
+
+.bs-docs-example {
+    position: relative;
+    margin: 2px 2px 0px 0px;
+    padding: 39px 19px 14px 0px;
+    *
+  padding-top: 19px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* Echo out a label for the example */
+.bs-docs-example-header {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: White;
+    background-color: #004466;
+    border: 1px solid #000000;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.bs-docs-example-header-right {
+    left: 300px;
+}
+
+/* Remove spacing between an example and it's code */
+.bs-docs-example + .prettyprint {
+    margin-top: -20px;
+    padding-top: 15px;
+}
+
+/* Tweak examples
+------------------------- */
+.bs-docs-example > p:last-child {
+    margin-bottom: 0;
+}
+
+.bs-docs-example .table,
+.bs-docs-example .progress,
+.bs-docs-example .well,
+.bs-docs-example .alert,
+.bs-docs-example .hero-unit,
+.bs-docs-example .pagination,
+.bs-docs-example .navbar,
+.bs-docs-example > .nav,
+.bs-docs-example blockquote {
+    margin-bottom: 5px;
+}
+
+.bs-docs-example .pagination {
+    margin-top: 0;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nomargin {
+    margin: 0 !important;
+}
+
+.container-crm {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.showborder {
+    border: 1px solid !important;
+    border-color: #ddd !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.noborder {
+    border: 0px !important;
+}
+
+/* Form  Display Style */
+.label-text {
+    text-align: right;
+    font-weight: bold;
+}
+
+.sub-title {
+    height: 30px;
+    font-weight: bold;
+    color: #000066;
+}
+
+.row-detail {
+    min-height: 21px;
+}
+
+.space-above {
+    margin-top: 10px !important;
+}
+
+.row-no-data {
+    height: 40px;
+}
+
+    .row-no-data td {
+        vertical-align: middle !important;
+    }
+
+.row-hilight {
+    background-color: #ffffcc !important;
+}
+
+.form-row {
+    min-height: 30px;
+}
+
+.full-width {
+    min-width: 100% !important;
+}
+
+/* Validation */
+
+.field-validation-error {
+    color: red;
+}
+
+/* Bootstrap Tab */
+.nav-tabs > li > a {
+    /* adjust padding for height*/
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+/*Table Freeze header and scrollable*/
+.fixed_headers {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+    .fixed_headers thead {
+        display: block;
+        width: 98%;
+    }
+
+    .fixed_headers th,
+    .fixed_headers td {
+        /*display: block;  
+    position: relative;*/
+    }
+
+        .fixed_headers td:nth-child(1),
+        .fixed_headers th:nth-child(1) {
+            min-width: 100px;
+        }
+
+        .fixed_headers td:nth-child(2),
+        .fixed_headers th:nth-child(2) {
+            min-width: 100px;
+        }
+
+        .fixed_headers td:nth-child(3),
+        .fixed_headers th:nth-child(3) {
+            min-width: 150px;
+        }
+
+    .fixed_headers tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        height: 300px;
+    }
+
+.old_ie_wrapper {
+    height: 200px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+    .old_ie_wrapper .fixed_headers thead {
+        display: block;
+    }
+
+    .old_ie_wrapper .fixed_headers tbody {
+        height: auto;
+    }
+
+        .old_ie_wrapper .fixed_headers tbody tr {
+            height: 22px;
+        }
+
+
+/* Verification */
+.show-verification-highlight {
+    border: 2px solid !important;
+    border-color: Red !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    visibility: visible !important;
+}
+
+/* DevExpress Overide Stylesheet */
+.dxpnlControl_DevEx {
+    font-family: Tahoma, Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+}
+
+
+/* panel gadget */
+.panel-gadget {
+    margin: 2px 2px 0px 0px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.panel-gadget-header {
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: White;
+    padding: 3px 7px;
+    background-color: #004466;
+    border: 1px solid #000000;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+
+.panel-gadget-header-right {
+    padding-right: 10px;
+    float: right;
+    -webkit-border-radius: 0px 4px 0px 4px;
+    -moz-border-radius: 0px 4px 0px 4px;
+    border-radius: 0px 4px 0px 4px;
+}
+
+.panel-gadget-detail {
+    padding-top: 10px;
+    padding-right: 10px;
+    clear: both;
+}
+
+/* Verification */
+.verification-view-answer {
+    margin-right: 10px;
+}
+
+.table-bordered > thead > tr > th {
+    background-color: #f2f2f2;
+}
+
+.table > thead > tr > th.consequence {
+    background-color: #e6ecff;
+}
+
+.date {
+    max-width: 120px;
+}
+
+.text-ellipsis {
+    display: inline-block;
+    /*width:100%;*/
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.tooltip-inner {
+    max-width: 700px !important;
+    text-align: left;
+}
+
+.crm-accountno {
+    max-width: 150px;
+}
+
+a.btn {
+    padding: 1px 1px;
+}
+
+tr.deleted > td {
+    color: #cccccc !important;
+}
+
+.dropdown-menu > li > a.text-success {
+    background-color: green !important;
+}
+
+.dropdown-menu > li > a.text-danger {
+    background-color: red !important;
+}
+
+.dropdown-menu > li > a:hover.text-success {
+    background-color: Lime !important;
+}
+
+input.account-no {
+    max-width: 120px;
+}
+
+.modal-lg {
+    width: 1000px !important;
+}
+
+#verification-wraper.old_ie_wrapper {
+    height: 160px;
+}
+
+.hide-field-label {
+    color: #cccccc;
+}
+
+.hide-field-value {
+    visibility: hidden;
 }

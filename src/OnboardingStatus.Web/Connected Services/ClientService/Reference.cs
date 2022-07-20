@@ -15,12 +15,39 @@ namespace OnboardingStatus_Web.ClientService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ClientDetailMock", Namespace="http://schemas.datacontract.org/2004/07/OnboardingStatus.Data")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OnboardingProcessHeader", Namespace="http://schemas.datacontract.org/2004/07/OnboardingStatus.Data")]
     [System.SerializableAttribute()]
-    public partial class ClientDetailMock : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class OnboardingProcessHeader : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private OnboardingStatus_Web.ClientService.OnboardingProcessItem[] ItemsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string account_noField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string date_of_birthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string emailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string mobile_phoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string name_enField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string name_thField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string onboarding_statusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string pidField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -29,6 +56,264 @@ namespace OnboardingStatus_Web.ClientService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public OnboardingStatus_Web.ClientService.OnboardingProcessItem[] Items {
+            get {
+                return this.ItemsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ItemsField, value) != true)) {
+                    this.ItemsField = value;
+                    this.RaisePropertyChanged("Items");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string account_no {
+            get {
+                return this.account_noField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.account_noField, value) != true)) {
+                    this.account_noField = value;
+                    this.RaisePropertyChanged("account_no");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string date_of_birth {
+            get {
+                return this.date_of_birthField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.date_of_birthField, value) != true)) {
+                    this.date_of_birthField = value;
+                    this.RaisePropertyChanged("date_of_birth");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.emailField, value) != true)) {
+                    this.emailField = value;
+                    this.RaisePropertyChanged("email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string mobile_phone {
+            get {
+                return this.mobile_phoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.mobile_phoneField, value) != true)) {
+                    this.mobile_phoneField = value;
+                    this.RaisePropertyChanged("mobile_phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name_en {
+            get {
+                return this.name_enField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.name_enField, value) != true)) {
+                    this.name_enField = value;
+                    this.RaisePropertyChanged("name_en");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name_th {
+            get {
+                return this.name_thField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.name_thField, value) != true)) {
+                    this.name_thField = value;
+                    this.RaisePropertyChanged("name_th");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string onboarding_status {
+            get {
+                return this.onboarding_statusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.onboarding_statusField, value) != true)) {
+                    this.onboarding_statusField = value;
+                    this.RaisePropertyChanged("onboarding_status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pid {
+            get {
+                return this.pidField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pidField, value) != true)) {
+                    this.pidField = value;
+                    this.RaisePropertyChanged("pid");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OnboardingProcessItem", Namespace="http://schemas.datacontract.org/2004/07/OnboardingStatus.Data")]
+    [System.SerializableAttribute()]
+    public partial class OnboardingProcessItem : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int lvlField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string remarkField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int seqField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string status_descField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string step_dateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string step_descField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string step_timeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int lvl {
+            get {
+                return this.lvlField;
+            }
+            set {
+                if ((this.lvlField.Equals(value) != true)) {
+                    this.lvlField = value;
+                    this.RaisePropertyChanged("lvl");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string remark {
+            get {
+                return this.remarkField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.remarkField, value) != true)) {
+                    this.remarkField = value;
+                    this.RaisePropertyChanged("remark");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int seq {
+            get {
+                return this.seqField;
+            }
+            set {
+                if ((this.seqField.Equals(value) != true)) {
+                    this.seqField = value;
+                    this.RaisePropertyChanged("seq");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string status_desc {
+            get {
+                return this.status_descField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.status_descField, value) != true)) {
+                    this.status_descField = value;
+                    this.RaisePropertyChanged("status_desc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string step_date {
+            get {
+                return this.step_dateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.step_dateField, value) != true)) {
+                    this.step_dateField = value;
+                    this.RaisePropertyChanged("step_date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string step_desc {
+            get {
+                return this.step_descField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.step_descField, value) != true)) {
+                    this.step_descField = value;
+                    this.RaisePropertyChanged("step_desc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string step_time {
+            get {
+                return this.step_timeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.step_timeField, value) != true)) {
+                    this.step_timeField = value;
+                    this.RaisePropertyChanged("step_time");
+                }
             }
         }
         
@@ -52,11 +337,11 @@ namespace OnboardingStatus_Web.ClientService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHelloWorld", ReplyAction="http://tempuri.org/IClientService/GetHelloWorldResponse")]
         System.Threading.Tasks.Task<string> GetHelloWorldAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/ClientDetailMock", ReplyAction="http://tempuri.org/IClientService/ClientDetailMockResponse")]
-        OnboardingStatus_Web.ClientService.ClientDetailMock ClientDetailMock();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetClientProcess", ReplyAction="http://tempuri.org/IClientService/GetClientProcessResponse")]
+        OnboardingStatus_Web.ClientService.OnboardingProcessHeader GetClientProcess(string pid);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/ClientDetailMock", ReplyAction="http://tempuri.org/IClientService/ClientDetailMockResponse")]
-        System.Threading.Tasks.Task<OnboardingStatus_Web.ClientService.ClientDetailMock> ClientDetailMockAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetClientProcess", ReplyAction="http://tempuri.org/IClientService/GetClientProcessResponse")]
+        System.Threading.Tasks.Task<OnboardingStatus_Web.ClientService.OnboardingProcessHeader> GetClientProcessAsync(string pid);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -94,12 +379,12 @@ namespace OnboardingStatus_Web.ClientService {
             return base.Channel.GetHelloWorldAsync();
         }
         
-        public OnboardingStatus_Web.ClientService.ClientDetailMock ClientDetailMock() {
-            return base.Channel.ClientDetailMock();
+        public OnboardingStatus_Web.ClientService.OnboardingProcessHeader GetClientProcess(string pid) {
+            return base.Channel.GetClientProcess(pid);
         }
         
-        public System.Threading.Tasks.Task<OnboardingStatus_Web.ClientService.ClientDetailMock> ClientDetailMockAsync() {
-            return base.Channel.ClientDetailMockAsync();
+        public System.Threading.Tasks.Task<OnboardingStatus_Web.ClientService.OnboardingProcessHeader> GetClientProcessAsync(string pid) {
+            return base.Channel.GetClientProcessAsync(pid);
         }
     }
 }

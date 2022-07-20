@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="10d2aa8b-7f9c-4057-9c85-caa8dc726a4c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="433e3df9-1a5e-4e4d-9b95-d7313ea33b82" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/OnboardingStatusApplicationService_Test/Client" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:80/onboardingstatusApplicationService_Test/Client" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Client.wsdl" MetadataType="Wsdl" ID="747b8a79-f4a9-466e-981d-796d7d6c8d94" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?wsdl" />
-    <MetadataFile FileName="Client.xsd" MetadataType="Schema" ID="c9a5ffae-3bc8-4e1f-8a63-c64df4f7fedb" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?xsd=xsd0" />
-    <MetadataFile FileName="Client.disco" MetadataType="Disco" ID="ab500418-97d4-4443-8b86-69406e05b344" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?disco" />
-    <MetadataFile FileName="Client1.xsd" MetadataType="Schema" ID="57c5e651-64df-472a-8ac8-81e1aa11e461" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?xsd=xsd1" />
-    <MetadataFile FileName="Client2.xsd" MetadataType="Schema" ID="ad7f90c8-f677-4138-8a65-25f37f60adf3" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?xsd=xsd2" />
+    <MetadataFile FileName="Client.wsdl" MetadataType="Wsdl" ID="b6dfec2d-30fc-4f9c-93cc-ed59fad4c41f" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?wsdl" />
+    <MetadataFile FileName="Client.xsd" MetadataType="Schema" ID="7023b7e0-657a-4416-b667-f177389fd0aa" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?xsd=xsd0" />
+    <MetadataFile FileName="Client.disco" MetadataType="Disco" ID="5d3dc97c-c9c9-46c5-88c8-be7441e63efe" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?disco" />
+    <MetadataFile FileName="Client1.xsd" MetadataType="Schema" ID="34be5800-e85d-4c3e-9da1-f1b42d3844a6" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?xsd=xsd1" />
+    <MetadataFile FileName="Client2.xsd" MetadataType="Schema" ID="7e393c85-7375-44ec-906f-5ace15354b7c" SourceId="1" SourceUrl="http://localhost/OnboardingStatusApplicationService_Test/Client?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

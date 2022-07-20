@@ -10,7 +10,8 @@ namespace OnboardingStatus_Web {
         public static void RegisterBundles(BundleCollection bundles) {
 
             var scriptBundle = new ScriptBundle("~/Scripts/bundle");
-            var styleBundle = new StyleBundle("~/Content/bundle");
+
+
 
             // jQuery
             scriptBundle
@@ -20,10 +21,6 @@ namespace OnboardingStatus_Web {
             scriptBundle
                 .Include("~/Scripts/bootstrap.js");
 
-            // Bootstrap
-            styleBundle
-                .Include("~/Content/bootstrap.css");
-
             // bootbox
             scriptBundle
                 .Include("~/Scripts/bootbox.js");
@@ -32,12 +29,23 @@ namespace OnboardingStatus_Web {
             scriptBundle
                 .Include("~/Scripts/Common/dialog.js");
 
-            // Custom site styles
-            styleBundle
-                .Include("~/Content/Site.css");
-
             bundles.Add(scriptBundle);
-            bundles.Add(styleBundle);
+
+            // CSS
+            bundles.Add(new StyleBundle("~/Content/bundle").Include(
+                "~/Content/bootstrap.css",
+                "~/Content/body.css",
+                "~/Content/bootstrap-responsive.css",
+                "~/Content/bootstrap-mvc-validation.css",
+                "~/Content/bootstrap-datepicker.css",
+                "~/Content/bootstrap-datetimepicker.css",
+                "~/Content/font-awesome.css",
+                "~/Content/paging.css",
+                "~/Content/bootstrap-sortable.css",
+                "~/Content/animate.css",
+                "~/Content/Site.css"
+            ));
+
 
 #if !DEBUG
             BundleTable.EnableOptimizations = true;

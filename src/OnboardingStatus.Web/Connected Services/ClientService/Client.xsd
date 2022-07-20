@@ -13,15 +13,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ClientDetailMock">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ClientDetailMockResponse">
+  <xs:element name="GetClientProcess">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OnboardingStatus.Data" minOccurs="0" name="ClientDetailMockResult" nillable="true" type="q1:ClientDetailMock" />
+        <xs:element minOccurs="0" name="pid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/OnboardingStatus.Data" minOccurs="0" name="GetClientProcessResult" nillable="true" type="q1:OnboardingProcessHeader" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
