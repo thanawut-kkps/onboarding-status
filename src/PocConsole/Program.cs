@@ -2,6 +2,7 @@
 using Limilabs.Client.POP3;
 using Limilabs.Mail;
 using Limilabs.Mail.MIME;
+using OnboardingStatus.Services;
 using OpenPop.Mime;
 using OpenPop.Pop3;
 using System;
@@ -16,9 +17,10 @@ namespace PocConsole
     {
         static void Main(string[] args)
         {
-           // Pop3();
-           // Imap();
-            Pop3Client();
+            // Pop3();
+            // Imap();
+            // Pop3Client();
+            TestClientService();
         }
 
         private static void GemBox()
@@ -113,6 +115,14 @@ namespace PocConsole
                 //    Console.WriteLine(email.);
                 //}
             }
+        }
+
+        private static void TestClientService()
+        {
+            var a = new ClientService();
+            var result = a.GetClientProcess("eeeeeee");
+            Console.Read();
+
         }
     }
 }

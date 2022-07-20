@@ -56,5 +56,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnboardingStatus.Services\OnboardingStatus.Services.csproj">
+      <Project>{14546870-8367-45b2-9b36-df2681c83e8d}</Project>
+      <Name>OnboardingStatus.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnboardingStatus\OnboardingStatus.csproj">
+      <Project>{40a86927-42db-49b6-a016-fb153e5b601a}</Project>
+      <Name>OnboardingStatus</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
